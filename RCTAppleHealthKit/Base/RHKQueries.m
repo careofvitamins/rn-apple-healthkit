@@ -85,6 +85,7 @@
 
                     NSDictionary *elem = @{
                             @"value" : @(value),
+                            @"unit" : [unit unitString],
                             @"startDate" : startDateString,
                             @"endDate" : endDateString,
                     };
@@ -413,6 +414,7 @@
 
                                            NSDictionary *elem = @{
                                                    @"value" : @(value),
+                                                   @"unit" : [unit unitString],
                                                    @"startDate" : startDateString,
                                                    @"endDate" : endDateString,
                                            };

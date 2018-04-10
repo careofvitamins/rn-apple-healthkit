@@ -261,6 +261,7 @@
 
             NSDictionary *response = @{
                     @"value" : @(percentage),
+                    @"unit" : [percentUnit unitString],
                     @"startDate" : [RCTAppleHealthKit buildISO8601StringFromDate:startDate],
                     @"endDate" : [RCTAppleHealthKit buildISO8601StringFromDate:endDate],
             };
@@ -288,6 +289,7 @@
 
             NSDictionary *response = @{
                     @"value" : @(leanBodyMass),
+                    @"unit" : [weightUnit unitString],
                     @"startDate" : [RCTAppleHealthKit buildISO8601StringFromDate:startDate],
                     @"endDate" : [RCTAppleHealthKit buildISO8601StringFromDate:endDate],
             };
