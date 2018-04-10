@@ -36,6 +36,7 @@
 
             NSDictionary *response = @{
                     @"value" : @(usersWeight),
+                    @"unit" : [unit unitString],
                     @"startDate" : [RCTAppleHealthKit buildISO8601StringFromDate:startDate],
                     @"endDate" : [RCTAppleHealthKit buildISO8601StringFromDate:endDate],
             };
@@ -171,6 +172,7 @@
 
             NSDictionary *response = @{
                     @"value" : @(height),
+                    @"unit" : [unit unitString],
                     @"startDate" : [RCTAppleHealthKit buildISO8601StringFromDate:startDate],
                     @"endDate" : [RCTAppleHealthKit buildISO8601StringFromDate:endDate],
             };
