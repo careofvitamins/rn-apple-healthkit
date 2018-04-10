@@ -211,8 +211,8 @@ RCT_EXPORT_METHOD(saveMindfulSession:(NSDictionary *)input callback:(RCTResponse
         if(permissions != nil){
             NSArray* readPermsArray = [permissions objectForKey:@"read"];
             NSArray* writePermsArray = [permissions objectForKey:@"write"];
-            NSSet* readPerms = [self getReadPermsFromOptions:readPermsArray];
-            NSSet* writePerms = [self getWritePermsFromOptions:writePermsArray];
+            NSSet* readPerms = [self getPermissions:readPermsArray];
+            NSSet* writePerms = [self getPermissions:writePermsArray];
 
             if(readPerms != nil) {
                 readDataTypes = readPerms;
