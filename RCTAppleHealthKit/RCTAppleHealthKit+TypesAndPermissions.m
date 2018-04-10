@@ -13,6 +13,18 @@
 
 #pragma mark - HealthKit Permissions
     
+- (NSDictionary *)getIOS11PermissionsDictionary {
+    if (@available(iOS 11.0, *)) {
+        NSDictionary *permissions = @{
+            @"RestingHeartRate" : [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierRestingHeartRate]
+        };
+        
+        return permissions;
+    }
+    
+    return @{};
+}
+    
 - (NSDictionary *)getPermissionsDictionary {
     NSDictionary *permissions = @{
         // Activity
@@ -100,12 +112,18 @@
 }
 
 - (NSSet *)getPermissions:(NSArray *)options {
-    NSDictionary *permissionDictionary = [self getPermissionsDictionary];
+    NSDictionary *defaultPermissionsDictionary = [self getPermissionsDictionary];
+    NSDictionary *ios11PermissionsDictionary = [self getIOS11PermissionsDictionary];
+    NSMutableDictionary *permissionsDictionary = [[NSMutableDictionary alloc] init];
+    
+    [permissionsDictionary addEntriesFromDictionary:defaultPermissionsDictionary];
+    [permissionsDictionary addEntriesFromDictionary:ios11PermissionsDictionary];
+    
     NSMutableSet *permissionSet = [NSMutableSet setWithCapacity:1];
     
     for (int i = 0; i < [options count]; i++) {
         NSString *key = options[i];
-        HKObjectType *value = [permissionDictionary objectForKey:key];
+        HKObjectType *value = [permissionsDictionary objectForKey:key];
         
         if (value == nil) {
             continue;
