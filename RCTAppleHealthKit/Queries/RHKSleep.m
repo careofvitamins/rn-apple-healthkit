@@ -7,12 +7,11 @@
 //  LICENSE file in the root directory of this source tree.
 //
 
+#import "RHKQueries.h"
+#import "RHKSleep.h"
+#import "RHKUtils.h"
 
-#import "RCTAppleHealthKit+Methods_Sleep.h"
-#import "RCTAppleHealthKit+Queries.h"
-#import "RCTAppleHealthKit+Utils.h"
-
-@implementation RCTAppleHealthKit (Methods_Sleep)
+@implementation RCTAppleHealthKit (Sleep)
 
 
 

@@ -7,14 +7,14 @@
 //  LICENSE file in the root directory of this source tree.
 //
 
-#import "RCTAppleHealthKit+Methods_Fitness.h"
-#import "RCTAppleHealthKit+Queries.h"
-#import "RCTAppleHealthKit+Utils.h"
-
 #import <React/RCTBridgeModule.h>
 #import <React/RCTEventDispatcher.h>
 
-@implementation RCTAppleHealthKit (Methods_Fitness)
+#import "RHKFitness.h"
+#import "RHKQueries.h"
+#import "RHKUtils.h"
+
+@implementation RCTAppleHealthKit (Fitness)
 
 
 - (void)fitness_getStepCountOnDay:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback

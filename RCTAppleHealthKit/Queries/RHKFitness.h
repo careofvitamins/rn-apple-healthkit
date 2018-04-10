@@ -9,7 +9,7 @@
 
 #import "RCTAppleHealthKit.h"
 
-@interface RCTAppleHealthKit (Methods_Fitness)
+@interface RCTAppleHealthKit (Fitness)
 
 - (void)fitness_getStepCountOnDay:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;
 - (void)fitness_getDailyStepSamples:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;

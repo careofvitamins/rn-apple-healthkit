@@ -6,11 +6,11 @@
 //  Copyright © 2017 Alexander Vallorosi. All rights reserved.
 //
 
-#import "RCTAppleHealthKit+Methods_Activity.h"
-#import "RCTAppleHealthKit+Queries.h"
-#import "RCTAppleHealthKit+Utils.h"
+#import "RHKActivity.h"
+#import "RHKQueries.h"
+#import "RHKUtils.h"
 
-@implementation RCTAppleHealthKit (Methods_Activity)
+@implementation RCTAppleHealthKit (Activity)
 
 - (void)activity_getActiveEnergyBurned:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback
 {

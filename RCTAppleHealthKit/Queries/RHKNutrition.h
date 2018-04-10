@@ -8,7 +8,7 @@
 
 #import "RCTAppleHealthKit.h"
 
-@interface RCTAppleHealthKit (Methods_Dietary)
+@interface RCTAppleHealthKit (Nutrition)
 
 - (void)saveFood:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;
 - (void)saveWater:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;

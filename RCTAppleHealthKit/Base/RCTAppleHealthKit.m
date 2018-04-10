@@ -6,21 +6,21 @@
 //  Copyright © 2016 Greg Wilson. All rights reserved.
 //
 
-#import "RCTAppleHealthKit.h"
-#import "RCTAppleHealthKit+TypesAndPermissions.h"
-
-#import "RCTAppleHealthKit+Methods_Activity.h"
-#import "RCTAppleHealthKit+Methods_Body.h"
-#import "RCTAppleHealthKit+Methods_Fitness.h"
-#import "RCTAppleHealthKit+Methods_Dietary.h"
-#import "RCTAppleHealthKit+Methods_Characteristic.h"
-#import "RCTAppleHealthKit+Methods_Vitals.h"
-#import "RCTAppleHealthKit+Methods_Results.h"
-#import "RCTAppleHealthKit+Methods_Sleep.h"
-#import "RCTAppleHealthKit+Methods_Mindfulness.h"
-
 #import <React/RCTBridgeModule.h>
 #import <React/RCTEventDispatcher.h>
+
+#import "RCTAppleHealthKit.h"
+
+#import "RHKActivity.h"
+#import "RHKBodyMeasurements.h"
+#import "RHKCharacteristics.h"
+#import "RHKFitness.h"
+#import "RHKMindfulness.h"
+#import "RHKNutrition.h"
+#import "RHKPermissions.h"
+#import "RHKResults.h"
+#import "RHKSleep.h"
+#import "RHKVitals.h"
 
 @implementation RCTAppleHealthKit
 @synthesize bridge = _bridge;

@@ -1,8 +1,8 @@
-#import "RCTAppleHealthKit+Methods_Vitals.h"
-#import "RCTAppleHealthKit+Queries.h"
-#import "RCTAppleHealthKit+Utils.h"
+#import "RHKQueries.h"
+#import "RHKUtils.h"
+#import "RHKVitals.h"
 
-@implementation RCTAppleHealthKit (Methods_Vitals)
+@implementation RCTAppleHealthKit (Vitals)
 
 
 - (void)vitals_getHeartRateSamples:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback

@@ -5,11 +5,11 @@
 //
 
 
-#import "RCTAppleHealthKit+Methods_Mindfulness.h"
-#import "RCTAppleHealthKit+Queries.h"
-#import "RCTAppleHealthKit+Utils.h"
+#import "RHKMindfulness.h"
+#import "RHKQueries.h"
+#import "RHKUtils.h"
 
-@implementation RCTAppleHealthKit (Methods_Sleep)
+@implementation RCTAppleHealthKit (Mindfulness)
 
 
 - (void)mindfulness_saveMindfulSession:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback

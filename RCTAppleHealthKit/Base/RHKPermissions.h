@@ -9,7 +9,7 @@
 
 #import "RCTAppleHealthKit.h"
 
-@interface RCTAppleHealthKit (TypesAndPermissions)
+@interface RCTAppleHealthKit (Permissions)
 
 - (NSSet *)getPermissions:(NSArray *)options;
 

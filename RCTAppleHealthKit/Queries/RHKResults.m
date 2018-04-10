@@ -1,8 +1,8 @@
-#import "RCTAppleHealthKit+Methods_Results.h"
-#import "RCTAppleHealthKit+Queries.h"
-#import "RCTAppleHealthKit+Utils.h"
+#import "RHKQueries.h"
+#import "RHKResults.h"
+#import "RHKUtils.h"
 
-@implementation RCTAppleHealthKit (Methods_Results)
+@implementation RCTAppleHealthKit (Results)
 
 
 - (void)results_getBloodGlucoseSamples:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback

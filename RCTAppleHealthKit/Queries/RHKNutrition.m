@@ -6,14 +6,14 @@
 //  Copyright © 2016 Greg Wilson. All rights reserved.
 //
 
-#import "RCTAppleHealthKit+Methods_Dietary.h"
-#import "RCTAppleHealthKit+Queries.h"
-#import "RCTAppleHealthKit+Utils.h"
-
 #import <React/RCTBridgeModule.h>
 #import <React/RCTEventDispatcher.h>
 
-@implementation RCTAppleHealthKit (Methods_Dietary)
+#import "RHKNutrition.h"
+#import "RHKQueries.h"
+#import "RHKUtils.h"
+
+@implementation RCTAppleHealthKit (Nutrition)
 
 - (void)saveFood:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback
 {

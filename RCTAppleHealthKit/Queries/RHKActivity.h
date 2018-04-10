@@ -7,7 +7,7 @@
 //
 #import "RCTAppleHealthKit.h"
 
-@interface RCTAppleHealthKit (Methods_Activity)
+@interface RCTAppleHealthKit (Activity)
 
 - (void)activity_getActiveEnergyBurned:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;
 

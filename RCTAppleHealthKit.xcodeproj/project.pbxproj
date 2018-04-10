@@ -9,17 +9,18 @@
 /* Begin PBXBuildFile section */
 		3774C8911D2092F20000B3F3 /* RCTAppleHealthKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3774C8901D2092F20000B3F3 /* RCTAppleHealthKit.h */; };
 		3774C8931D2092F20000B3F3 /* RCTAppleHealthKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 3774C8921D2092F20000B3F3 /* RCTAppleHealthKit.m */; };
-		3774C89B1D2095450000B3F3 /* RCTAppleHealthKit+Queries.m in Sources */ = {isa = PBXBuildFile; fileRef = 3774C89A1D2095450000B3F3 /* RCTAppleHealthKit+Queries.m */; };
-		3774C89E1D2095850000B3F3 /* RCTAppleHealthKit+TypesAndPermissions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3774C89D1D2095850000B3F3 /* RCTAppleHealthKit+TypesAndPermissions.m */; };
-		3774C8A11D20A6B90000B3F3 /* RCTAppleHealthKit+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3774C8A01D20A6B90000B3F3 /* RCTAppleHealthKit+Utils.m */; };
-		3774C8D41D20C6390000B3F3 /* RCTAppleHealthKit+Methods_Body.m in Sources */ = {isa = PBXBuildFile; fileRef = 3774C8D31D20C6390000B3F3 /* RCTAppleHealthKit+Methods_Body.m */; };
-		3774C8D71D20C65F0000B3F3 /* RCTAppleHealthKit+Methods_Fitness.m in Sources */ = {isa = PBXBuildFile; fileRef = 3774C8D61D20C65F0000B3F3 /* RCTAppleHealthKit+Methods_Fitness.m */; };
-		377D44F31D247D0A004E35CB /* RCTAppleHealthKit+Methods_Characteristic.m in Sources */ = {isa = PBXBuildFile; fileRef = 377D44F21D247D0A004E35CB /* RCTAppleHealthKit+Methods_Characteristic.m */; };
-		37837E7D1DCFE270000201A0 /* RCTAppleHealthKit+Methods_Sleep.m in Sources */ = {isa = PBXBuildFile; fileRef = 37837E7C1DCFE270000201A0 /* RCTAppleHealthKit+Methods_Sleep.m */; };
-		58C81E6F1F84F6970005DD48 /* RCTAppleHealthKit+Methods_Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C81E6D1F84F6970005DD48 /* RCTAppleHealthKit+Methods_Activity.m */; };
-		61232F931E303758000A5026 /* RCTAppleHealthKit+Methods_Mindfulness.m in Sources */ = {isa = PBXBuildFile; fileRef = 61232F921E303758000A5026 /* RCTAppleHealthKit+Methods_Mindfulness.m */; };
-		64C42D4A1D351A8800A0A8F7 /* RCTAppleHealthKit+Methods_Vitals.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C42D491D351A8800A0A8F7 /* RCTAppleHealthKit+Methods_Vitals.m */; };
-		64E0E73F1D37947B00EAB905 /* RCTAppleHealthKit+Methods_Results.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E0E73E1D37947B00EAB905 /* RCTAppleHealthKit+Methods_Results.m */; };
+		3774C89B1D2095450000B3F3 /* RHKQueries.m in Sources */ = {isa = PBXBuildFile; fileRef = 3774C89A1D2095450000B3F3 /* RHKQueries.m */; };
+		3774C89E1D2095850000B3F3 /* RHKPermissions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3774C89D1D2095850000B3F3 /* RHKPermissions.m */; };
+		3774C8A11D20A6B90000B3F3 /* RHKUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3774C8A01D20A6B90000B3F3 /* RHKUtils.m */; };
+		3774C8D41D20C6390000B3F3 /* RHKBodyMeasurements.m in Sources */ = {isa = PBXBuildFile; fileRef = 3774C8D31D20C6390000B3F3 /* RHKBodyMeasurements.m */; };
+		3774C8D71D20C65F0000B3F3 /* RHKFitness.m in Sources */ = {isa = PBXBuildFile; fileRef = 3774C8D61D20C65F0000B3F3 /* RHKFitness.m */; };
+		377D44F31D247D0A004E35CB /* RHKCharacteristics.m in Sources */ = {isa = PBXBuildFile; fileRef = 377D44F21D247D0A004E35CB /* RHKCharacteristics.m */; };
+		37837E7D1DCFE270000201A0 /* RHKSleep.m in Sources */ = {isa = PBXBuildFile; fileRef = 37837E7C1DCFE270000201A0 /* RHKSleep.m */; };
+		58C81E6F1F84F6970005DD48 /* RHKActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C81E6D1F84F6970005DD48 /* RHKActivity.m */; };
+		61232F931E303758000A5026 /* RHKMindfulness.m in Sources */ = {isa = PBXBuildFile; fileRef = 61232F921E303758000A5026 /* RHKMindfulness.m */; };
+		64C42D4A1D351A8800A0A8F7 /* RHKVitals.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C42D491D351A8800A0A8F7 /* RHKVitals.m */; };
+		64E0E73F1D37947B00EAB905 /* RHKResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E0E73E1D37947B00EAB905 /* RHKResults.m */; };
+		DB18C0E9207D3343003AF437 /* RHKNutrition.m in Sources */ = {isa = PBXBuildFile; fileRef = DB18C0E8207D3343003AF437 /* RHKNutrition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,28 +40,30 @@
 		3774C88D1D2092F20000B3F3 /* libRCTAppleHealthKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTAppleHealthKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3774C8901D2092F20000B3F3 /* RCTAppleHealthKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTAppleHealthKit.h; sourceTree = "<group>"; };
 		3774C8921D2092F20000B3F3 /* RCTAppleHealthKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTAppleHealthKit.m; sourceTree = "<group>"; };
-		3774C8991D2095450000B3F3 /* RCTAppleHealthKit+Queries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RCTAppleHealthKit+Queries.h"; sourceTree = "<group>"; };
-		3774C89A1D2095450000B3F3 /* RCTAppleHealthKit+Queries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RCTAppleHealthKit+Queries.m"; sourceTree = "<group>"; };
-		3774C89C1D2095850000B3F3 /* RCTAppleHealthKit+TypesAndPermissions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RCTAppleHealthKit+TypesAndPermissions.h"; sourceTree = "<group>"; };
-		3774C89D1D2095850000B3F3 /* RCTAppleHealthKit+TypesAndPermissions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RCTAppleHealthKit+TypesAndPermissions.m"; sourceTree = "<group>"; };
-		3774C89F1D20A6B90000B3F3 /* RCTAppleHealthKit+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RCTAppleHealthKit+Utils.h"; sourceTree = "<group>"; };
-		3774C8A01D20A6B90000B3F3 /* RCTAppleHealthKit+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RCTAppleHealthKit+Utils.m"; sourceTree = "<group>"; };
-		3774C8D21D20C6390000B3F3 /* RCTAppleHealthKit+Methods_Body.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RCTAppleHealthKit+Methods_Body.h"; sourceTree = "<group>"; };
-		3774C8D31D20C6390000B3F3 /* RCTAppleHealthKit+Methods_Body.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RCTAppleHealthKit+Methods_Body.m"; sourceTree = "<group>"; };
-		3774C8D51D20C65F0000B3F3 /* RCTAppleHealthKit+Methods_Fitness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RCTAppleHealthKit+Methods_Fitness.h"; sourceTree = "<group>"; };
-		3774C8D61D20C65F0000B3F3 /* RCTAppleHealthKit+Methods_Fitness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RCTAppleHealthKit+Methods_Fitness.m"; sourceTree = "<group>"; };
-		377D44F11D247D0A004E35CB /* RCTAppleHealthKit+Methods_Characteristic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RCTAppleHealthKit+Methods_Characteristic.h"; sourceTree = "<group>"; };
-		377D44F21D247D0A004E35CB /* RCTAppleHealthKit+Methods_Characteristic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RCTAppleHealthKit+Methods_Characteristic.m"; sourceTree = "<group>"; };
-		37837E7B1DCFE270000201A0 /* RCTAppleHealthKit+Methods_Sleep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RCTAppleHealthKit+Methods_Sleep.h"; sourceTree = "<group>"; };
-		37837E7C1DCFE270000201A0 /* RCTAppleHealthKit+Methods_Sleep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RCTAppleHealthKit+Methods_Sleep.m"; sourceTree = "<group>"; };
-		58C81E6D1F84F6970005DD48 /* RCTAppleHealthKit+Methods_Activity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RCTAppleHealthKit+Methods_Activity.m"; sourceTree = "<group>"; };
-		58C81E6E1F84F6970005DD48 /* RCTAppleHealthKit+Methods_Activity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RCTAppleHealthKit+Methods_Activity.h"; sourceTree = "<group>"; };
-		61232F911E303758000A5026 /* RCTAppleHealthKit+Methods_Mindfulness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RCTAppleHealthKit+Methods_Mindfulness.h"; sourceTree = "<group>"; };
-		61232F921E303758000A5026 /* RCTAppleHealthKit+Methods_Mindfulness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RCTAppleHealthKit+Methods_Mindfulness.m"; sourceTree = "<group>"; };
-		64C42D481D351A8800A0A8F7 /* RCTAppleHealthKit+Methods_Vitals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RCTAppleHealthKit+Methods_Vitals.h"; sourceTree = "<group>"; };
-		64C42D491D351A8800A0A8F7 /* RCTAppleHealthKit+Methods_Vitals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RCTAppleHealthKit+Methods_Vitals.m"; sourceTree = "<group>"; };
-		64E0E73D1D37947B00EAB905 /* RCTAppleHealthKit+Methods_Results.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RCTAppleHealthKit+Methods_Results.h"; sourceTree = "<group>"; };
-		64E0E73E1D37947B00EAB905 /* RCTAppleHealthKit+Methods_Results.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RCTAppleHealthKit+Methods_Results.m"; sourceTree = "<group>"; };
+		3774C8991D2095450000B3F3 /* RHKQueries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHKQueries.h; sourceTree = "<group>"; };
+		3774C89A1D2095450000B3F3 /* RHKQueries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHKQueries.m; sourceTree = "<group>"; };
+		3774C89C1D2095850000B3F3 /* RHKPermissions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHKPermissions.h; sourceTree = "<group>"; };
+		3774C89D1D2095850000B3F3 /* RHKPermissions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHKPermissions.m; sourceTree = "<group>"; };
+		3774C89F1D20A6B90000B3F3 /* RHKUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHKUtils.h; sourceTree = "<group>"; };
+		3774C8A01D20A6B90000B3F3 /* RHKUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHKUtils.m; sourceTree = "<group>"; };
+		3774C8D21D20C6390000B3F3 /* RHKBodyMeasurements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHKBodyMeasurements.h; sourceTree = "<group>"; };
+		3774C8D31D20C6390000B3F3 /* RHKBodyMeasurements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHKBodyMeasurements.m; sourceTree = "<group>"; };
+		3774C8D51D20C65F0000B3F3 /* RHKFitness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHKFitness.h; sourceTree = "<group>"; };
+		3774C8D61D20C65F0000B3F3 /* RHKFitness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHKFitness.m; sourceTree = "<group>"; };
+		377D44F11D247D0A004E35CB /* RHKCharacteristics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHKCharacteristics.h; sourceTree = "<group>"; };
+		377D44F21D247D0A004E35CB /* RHKCharacteristics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHKCharacteristics.m; sourceTree = "<group>"; };
+		37837E7B1DCFE270000201A0 /* RHKSleep.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHKSleep.h; sourceTree = "<group>"; };
+		37837E7C1DCFE270000201A0 /* RHKSleep.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHKSleep.m; sourceTree = "<group>"; };
+		58C81E6D1F84F6970005DD48 /* RHKActivity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RHKActivity.m; sourceTree = "<group>"; };
+		58C81E6E1F84F6970005DD48 /* RHKActivity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RHKActivity.h; sourceTree = "<group>"; };
+		61232F911E303758000A5026 /* RHKMindfulness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHKMindfulness.h; sourceTree = "<group>"; };
+		61232F921E303758000A5026 /* RHKMindfulness.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHKMindfulness.m; sourceTree = "<group>"; };
+		64C42D481D351A8800A0A8F7 /* RHKVitals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHKVitals.h; sourceTree = "<group>"; };
+		64C42D491D351A8800A0A8F7 /* RHKVitals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHKVitals.m; sourceTree = "<group>"; };
+		64E0E73D1D37947B00EAB905 /* RHKResults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHKResults.h; sourceTree = "<group>"; };
+		64E0E73E1D37947B00EAB905 /* RHKResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHKResults.m; sourceTree = "<group>"; };
+		DB18C0E7207D3343003AF437 /* RHKNutrition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHKNutrition.h; sourceTree = "<group>"; };
+		DB18C0E8207D3343003AF437 /* RHKNutrition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHKNutrition.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,32 +96,50 @@
 		3774C88F1D2092F20000B3F3 /* RCTAppleHealthKit */ = {
 			isa = PBXGroup;
 			children = (
-				58C81E6E1F84F6970005DD48 /* RCTAppleHealthKit+Methods_Activity.h */,
-				58C81E6D1F84F6970005DD48 /* RCTAppleHealthKit+Methods_Activity.m */,
-				61232F911E303758000A5026 /* RCTAppleHealthKit+Methods_Mindfulness.h */,
-				61232F921E303758000A5026 /* RCTAppleHealthKit+Methods_Mindfulness.m */,
-				64E0E73D1D37947B00EAB905 /* RCTAppleHealthKit+Methods_Results.h */,
-				64E0E73E1D37947B00EAB905 /* RCTAppleHealthKit+Methods_Results.m */,
-				64C42D481D351A8800A0A8F7 /* RCTAppleHealthKit+Methods_Vitals.h */,
-				64C42D491D351A8800A0A8F7 /* RCTAppleHealthKit+Methods_Vitals.m */,
-				3774C8901D2092F20000B3F3 /* RCTAppleHealthKit.h */,
-				3774C8921D2092F20000B3F3 /* RCTAppleHealthKit.m */,
-				3774C8991D2095450000B3F3 /* RCTAppleHealthKit+Queries.h */,
-				3774C89A1D2095450000B3F3 /* RCTAppleHealthKit+Queries.m */,
-				3774C89C1D2095850000B3F3 /* RCTAppleHealthKit+TypesAndPermissions.h */,
-				3774C89D1D2095850000B3F3 /* RCTAppleHealthKit+TypesAndPermissions.m */,
-				3774C89F1D20A6B90000B3F3 /* RCTAppleHealthKit+Utils.h */,
-				3774C8A01D20A6B90000B3F3 /* RCTAppleHealthKit+Utils.m */,
-				3774C8D21D20C6390000B3F3 /* RCTAppleHealthKit+Methods_Body.h */,
-				3774C8D31D20C6390000B3F3 /* RCTAppleHealthKit+Methods_Body.m */,
-				3774C8D51D20C65F0000B3F3 /* RCTAppleHealthKit+Methods_Fitness.h */,
-				3774C8D61D20C65F0000B3F3 /* RCTAppleHealthKit+Methods_Fitness.m */,
-				377D44F11D247D0A004E35CB /* RCTAppleHealthKit+Methods_Characteristic.h */,
-				377D44F21D247D0A004E35CB /* RCTAppleHealthKit+Methods_Characteristic.m */,
-				37837E7B1DCFE270000201A0 /* RCTAppleHealthKit+Methods_Sleep.h */,
-				37837E7C1DCFE270000201A0 /* RCTAppleHealthKit+Methods_Sleep.m */,
+				DB18C005207D207A003AF437 /* Base */,
+				DB18C004207D1FD4003AF437 /* Queries */,
 			);
 			path = RCTAppleHealthKit;
+			sourceTree = "<group>";
+		};
+		DB18C004207D1FD4003AF437 /* Queries */ = {
+			isa = PBXGroup;
+			children = (
+				58C81E6E1F84F6970005DD48 /* RHKActivity.h */,
+				58C81E6D1F84F6970005DD48 /* RHKActivity.m */,
+				3774C8D21D20C6390000B3F3 /* RHKBodyMeasurements.h */,
+				3774C8D31D20C6390000B3F3 /* RHKBodyMeasurements.m */,
+				377D44F11D247D0A004E35CB /* RHKCharacteristics.h */,
+				377D44F21D247D0A004E35CB /* RHKCharacteristics.m */,
+				3774C8D51D20C65F0000B3F3 /* RHKFitness.h */,
+				3774C8D61D20C65F0000B3F3 /* RHKFitness.m */,
+				61232F911E303758000A5026 /* RHKMindfulness.h */,
+				61232F921E303758000A5026 /* RHKMindfulness.m */,
+				DB18C0E7207D3343003AF437 /* RHKNutrition.h */,
+				DB18C0E8207D3343003AF437 /* RHKNutrition.m */,
+				64E0E73D1D37947B00EAB905 /* RHKResults.h */,
+				64E0E73E1D37947B00EAB905 /* RHKResults.m */,
+				37837E7B1DCFE270000201A0 /* RHKSleep.h */,
+				37837E7C1DCFE270000201A0 /* RHKSleep.m */,
+				64C42D481D351A8800A0A8F7 /* RHKVitals.h */,
+				64C42D491D351A8800A0A8F7 /* RHKVitals.m */,
+			);
+			path = Queries;
+			sourceTree = "<group>";
+		};
+		DB18C005207D207A003AF437 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				3774C8991D2095450000B3F3 /* RHKQueries.h */,
+				3774C89A1D2095450000B3F3 /* RHKQueries.m */,
+				3774C89C1D2095850000B3F3 /* RHKPermissions.h */,
+				3774C89D1D2095850000B3F3 /* RHKPermissions.m */,
+				3774C8901D2092F20000B3F3 /* RCTAppleHealthKit.h */,
+				3774C8921D2092F20000B3F3 /* RCTAppleHealthKit.m */,
+				3774C89F1D20A6B90000B3F3 /* RHKUtils.h */,
+				3774C8A01D20A6B90000B3F3 /* RHKUtils.m */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,18 +198,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3774C89B1D2095450000B3F3 /* RCTAppleHealthKit+Queries.m in Sources */,
-				3774C8A11D20A6B90000B3F3 /* RCTAppleHealthKit+Utils.m in Sources */,
-				37837E7D1DCFE270000201A0 /* RCTAppleHealthKit+Methods_Sleep.m in Sources */,
-				3774C8D41D20C6390000B3F3 /* RCTAppleHealthKit+Methods_Body.m in Sources */,
-				61232F931E303758000A5026 /* RCTAppleHealthKit+Methods_Mindfulness.m in Sources */,
-				64E0E73F1D37947B00EAB905 /* RCTAppleHealthKit+Methods_Results.m in Sources */,
-				64C42D4A1D351A8800A0A8F7 /* RCTAppleHealthKit+Methods_Vitals.m in Sources */,
+				3774C89B1D2095450000B3F3 /* RHKQueries.m in Sources */,
+				3774C8A11D20A6B90000B3F3 /* RHKUtils.m in Sources */,
+				37837E7D1DCFE270000201A0 /* RHKSleep.m in Sources */,
+				3774C8D41D20C6390000B3F3 /* RHKBodyMeasurements.m in Sources */,
+				61232F931E303758000A5026 /* RHKMindfulness.m in Sources */,
+				64E0E73F1D37947B00EAB905 /* RHKResults.m in Sources */,
+				64C42D4A1D351A8800A0A8F7 /* RHKVitals.m in Sources */,
+				DB18C0E9207D3343003AF437 /* RHKNutrition.m in Sources */,
 				3774C8931D2092F20000B3F3 /* RCTAppleHealthKit.m in Sources */,
-				377D44F31D247D0A004E35CB /* RCTAppleHealthKit+Methods_Characteristic.m in Sources */,
-				3774C89E1D2095850000B3F3 /* RCTAppleHealthKit+TypesAndPermissions.m in Sources */,
-				3774C8D71D20C65F0000B3F3 /* RCTAppleHealthKit+Methods_Fitness.m in Sources */,
-				58C81E6F1F84F6970005DD48 /* RCTAppleHealthKit+Methods_Activity.m in Sources */,
+				377D44F31D247D0A004E35CB /* RHKCharacteristics.m in Sources */,
+				3774C89E1D2095850000B3F3 /* RHKPermissions.m in Sources */,
+				3774C8D71D20C65F0000B3F3 /* RHKFitness.m in Sources */,
+				58C81E6F1F84F6970005DD48 /* RHKActivity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

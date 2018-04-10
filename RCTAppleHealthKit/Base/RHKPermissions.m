@@ -6,9 +6,9 @@
 //  Copyright © 2016 Greg Wilson. All rights reserved.
 //
 
-#import "RCTAppleHealthKit+TypesAndPermissions.h"
+#import "RHKPermissions.h"
 
-@implementation RCTAppleHealthKit (TypesAndPermissions)
+@implementation RCTAppleHealthKit (Permissions)
 
 
 #pragma mark - HealthKit Permissions

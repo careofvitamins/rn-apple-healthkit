@@ -7,8 +7,8 @@
 //  LICENSE file in the root directory of this source tree.
 //
 
-#import "RCTAppleHealthKit+Queries.h"
-#import "RCTAppleHealthKit+Utils.h"
+#import "RHKQueries.h"
+#import "RHKUtils.h"
 
 @implementation RCTAppleHealthKit (Queries)
 

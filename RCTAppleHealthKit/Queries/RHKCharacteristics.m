@@ -7,10 +7,10 @@
 //  LICENSE file in the root directory of this source tree.
 //
 
-#import "RCTAppleHealthKit+Methods_Characteristic.h"
-#import "RCTAppleHealthKit+Utils.h"
+#import "RHKCharacteristics.h"
+#import "RHKUtils.h"
 
-@implementation RCTAppleHealthKit (Methods_Characteristic)
+@implementation RCTAppleHealthKit (Characteristics)
 
 
 - (void)characteristic_getBiologicalSex:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback {

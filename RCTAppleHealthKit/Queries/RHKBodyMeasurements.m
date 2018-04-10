@@ -7,11 +7,11 @@
 //  LICENSE file in the root directory of this source tree.
 //
 
-#import "RCTAppleHealthKit+Methods_Body.h"
-#import "RCTAppleHealthKit+Queries.h"
-#import "RCTAppleHealthKit+Utils.h"
+#import "RHKBodyMeasurements.h"
+#import "RHKQueries.h"
+#import "RHKUtils.h"
 
-@implementation RCTAppleHealthKit (Methods_Body)
+@implementation RCTAppleHealthKit (BodyMeasurements)
 
 
 - (void)body_getLatestWeight:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback

@@ -9,7 +9,7 @@
 
 #import "RCTAppleHealthKit.h"
 
-@interface RCTAppleHealthKit (Methods_Body)
+@interface RCTAppleHealthKit (BodyMeasurements)
 
 - (void)body_getLatestWeight:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;
 - (void)body_getWeightSamples:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;

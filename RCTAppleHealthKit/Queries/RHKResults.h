@@ -1,6 +1,6 @@
 #import "RCTAppleHealthKit.h"
 
-@interface RCTAppleHealthKit (Methods_Results)
+@interface RCTAppleHealthKit (Results)
 
 - (void)results_getBloodGlucoseSamples:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;
 

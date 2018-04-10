@@ -1,6 +1,6 @@
 #import "RCTAppleHealthKit.h"
 
-@interface RCTAppleHealthKit (Methods_Vitals)
+@interface RCTAppleHealthKit (Vitals)
 
 - (void)vitals_getHeartRateSamples:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;
 - (void)vitals_getBodyTemperatureSamples:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;
