@@ -97,12 +97,12 @@
 			isa = PBXGroup;
 			children = (
 				DB18C005207D207A003AF437 /* Base */,
-				DB18C004207D1FD4003AF437 /* Queries */,
+				DB18C004207D1FD4003AF437 /* RecordTypes */,
 			);
 			path = RCTAppleHealthKit;
 			sourceTree = "<group>";
 		};
-		DB18C004207D1FD4003AF437 /* Queries */ = {
+		DB18C004207D1FD4003AF437 /* RecordTypes */ = {
 			isa = PBXGroup;
 			children = (
 				58C81E6E1F84F6970005DD48 /* RHKActivity.h */,
@@ -124,7 +124,7 @@
 				64C42D481D351A8800A0A8F7 /* RHKVitals.h */,
 				64C42D491D351A8800A0A8F7 /* RHKVitals.m */,
 			);
-			path = Queries;
+			path = RecordTypes;
 			sourceTree = "<group>";
 		};
 		DB18C005207D207A003AF437 /* Base */ = {
