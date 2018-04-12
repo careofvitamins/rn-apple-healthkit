@@ -132,9 +132,9 @@ RCT_EXPORT_METHOD(getFlightsClimbed:(NSDictionary *)input callback:(RCTResponseS
     [self fitness_getFlightsClimbedOnDay:input callback:callback];
 }
 
-RCT_EXPORT_METHOD(getBiotinSamples:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback)
+RCT_EXPORT_METHOD(getQuantitySamples:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback)
 {
-    [self nutrition_getBiotinSamples:input callback:callback];
+    [self getQuantitySamples:input callback:callback];
 }
 
 RCT_EXPORT_METHOD(saveFood:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback)

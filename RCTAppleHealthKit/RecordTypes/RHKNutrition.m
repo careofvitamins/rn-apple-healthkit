@@ -15,11 +15,6 @@
 
 @implementation RCTAppleHealthKit (Nutrition)
 
-- (void)nutrition_getBiotinSamples:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback
-{
-    return [self getSamples:@"biotin" input:input callback:callback];
-}
-
 - (void)saveFood:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback
 {
     NSString *foodNameValue = [RCTAppleHealthKit stringFromOptions:input key:@"foodName" withDefault:nil];
