@@ -12,6 +12,70 @@
 
 @implementation RCTAppleHealthKit (Queries)
 
+- (HKQuantityTypeIdentifier)getQuantityTypeIdentifier:(NSString *)type
+{
+    static NSDictionary* typeMapping = nil;
+    
+    static dispatch_once_t once;
+    dispatch_once(&once, ^{
+        typeMapping = @{
+            @"biotin": HKQuantityTypeIdentifierDietaryBiotin,
+        };
+    });
+    
+    return [typeMapping objectForKey:type];
+}
+
+- (NSString *)getUnitString:(NSString *)type
+{
+    static NSDictionary* unitMapping = nil;
+    
+    static dispatch_once_t once;
+    dispatch_once(&once, ^{
+        unitMapping = @{
+            @"biotin": @"mcg",
+        };
+    });
+    
+    return [unitMapping objectForKey:type];
+}
+
+- (void)getSamples:(NSString *)type input:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback
+{
+    NSUInteger limit = [RCTAppleHealthKit uintFromOptions:input key:@"limit" withDefault:HKObjectQueryNoLimit];
+    BOOL ascending = [RCTAppleHealthKit boolFromOptions:input key:@"ascending" withDefault:false];
+    NSDate *startDate = [RCTAppleHealthKit dateFromOptions:input key:@"startDate" withDefault:nil];
+    NSDate *endDate = [RCTAppleHealthKit dateFromOptions:input key:@"endDate" withDefault:[NSDate date]];
+    
+    if(startDate == nil) {
+        callback(@[RCTMakeError(@"startDate is required in options", nil, nil)]);
+        return;
+    }
+    
+    NSPredicate * predicate = [RCTAppleHealthKit predicateForSamplesBetweenDates:startDate endDate:endDate];
+
+    HKQuantityTypeIdentifier typeIdentifier = [self getQuantityTypeIdentifier:type];
+    NSString *unitString = [self getUnitString:type];
+    
+    HKQuantityType *quantityType = [HKQuantityType quantityTypeForIdentifier:typeIdentifier];
+    HKUnit *unit = [HKUnit unitFromString:unitString];
+    
+    [self fetchQuantitySamplesOfType:quantityType
+                                unit:unit
+                           predicate:predicate
+                           ascending:ascending
+                               limit:limit
+                          completion:^(NSArray *results, NSError *error) {
+                              if (results){
+                                  callback(@[[NSNull null], results]);
+                                  return;
+                              } else {
+                                  NSLog(@"error fetching samples: %@", error);
+                                  callback(@[RCTMakeError(@"error fetching samples", nil, nil)]);
+                                  return;
+                              }
+                          }];
+}
 
 - (void)fetchMostRecentQuantitySampleOfType:(HKQuantityType *)quantityType
                                   predicate:(NSPredicate *)predicate

@@ -11,6 +11,9 @@
 
 @interface RCTAppleHealthKit (Queries)
 
+- (HKQuantityTypeIdentifier)getQuantityTypeIdentifier:(NSString *)type;
+- (NSString *)getUnitString:(NSString *)type
+- (void)getSamples:(NSString *)type input:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;
 - (void)fetchMostRecentQuantitySampleOfType:(HKQuantityType *)quantityType predicate:(NSPredicate *)predicate completion:(void (^)(HKQuantity *mostRecentQuantity, NSDate *startDate, NSDate *endDate, NSError *error))completion;
 - (void)fetchSumOfSamplesTodayForType:(HKQuantityType *)quantityType unit:(HKUnit *)unit completion:(void (^)(double, NSError *))completionHandler;
 - (void)fetchSumOfSamplesOnDayForType:(HKQuantityType *)quantityType unit:(HKUnit *)unit day:(NSDate *)day completion:(void (^)(double, NSDate *, NSDate *, NSError *))completionHandler;
