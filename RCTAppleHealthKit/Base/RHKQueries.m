@@ -112,8 +112,9 @@
     return [unitMapping objectForKey:type];
 }
 
-- (void)getSamples:(NSString *)type input:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback
+- (void)getQuantitySamples:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback
 {
+    NSString *type = [RCTAppleHealthKit stringFromOptions:input key:@"type" withDefault:false];
     NSUInteger limit = [RCTAppleHealthKit uintFromOptions:input key:@"limit" withDefault:HKObjectQueryNoLimit];
     BOOL ascending = [RCTAppleHealthKit boolFromOptions:input key:@"ascending" withDefault:false];
     NSDate *startDate = [RCTAppleHealthKit dateFromOptions:input key:@"startDate" withDefault:nil];
