@@ -15,7 +15,6 @@
 
 @implementation RCTAppleHealthKit (Nutrition)
 
-- (void)nutrition_getBiotinEntries:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback
 {
     NSUInteger limit = [RCTAppleHealthKit uintFromOptions:input key:@"limit" withDefault:HKObjectQueryNoLimit];
     BOOL ascending = [RCTAppleHealthKit boolFromOptions:input key:@"ascending" withDefault:false];
@@ -48,6 +47,7 @@
                           }];
 }
 
+- (void)nutrition_getBiotinSamples:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback
 - (void)saveFood:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback
 {
     NSString *foodNameValue = [RCTAppleHealthKit stringFromOptions:input key:@"foodName" withDefault:nil];
