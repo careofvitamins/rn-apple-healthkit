@@ -10,6 +10,8 @@
 
 @interface RCTAppleHealthKit (Nutrition)
 
+- (void)nutrition_getBiotinEntries:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;
+
 - (void)saveFood:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;
 - (void)saveWater:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback;
 

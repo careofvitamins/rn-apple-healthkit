@@ -132,6 +132,11 @@ RCT_EXPORT_METHOD(getFlightsClimbed:(NSDictionary *)input callback:(RCTResponseS
     [self fitness_getFlightsClimbedOnDay:input callback:callback];
 }
 
+RCT_EXPORT_METHOD(getBiotinEntries:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback)
+{
+    [self nutrition_getBiotinEntries:input callback:callback];
+}
+
 RCT_EXPORT_METHOD(saveFood:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback)
 {
     [self saveFood:input callback:callback];
