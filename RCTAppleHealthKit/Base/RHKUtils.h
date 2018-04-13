@@ -31,6 +31,7 @@
 + (NSDate *)dateFromOptions:(NSDictionary *)options key:(NSString *)key withDefault:(NSDate *)defaultValue;
 + (NSString *)stringFromOptions:(NSDictionary *)options key:(NSString *)key withDefault:(NSString *)defaultValue;
 + (bool)boolFromOptions:(NSDictionary *)options key:(NSString *)key withDefault:(bool)defaultValue;
++ (NSDictionary *)dictFromOptions:(NSDictionary *)options key:(NSString *)key withDefault:(NSDictionary *)defaultValue;
 
 + (NSMutableArray *)reverseNSMutableArray:(NSMutableArray *)array;
 

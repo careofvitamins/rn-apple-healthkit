@@ -306,6 +306,15 @@
     return [num boolValue];
 }
 
++ (NSDictionary *)dictFromOptions:(NSDictionary *)options key:(NSString *)key withDefault:(NSDictionary *)defaultValue {
+    NSDictionary *dictionary = [options objectForKey:key];
+    
+    if (dictionary == nil) {
+        return defaultValue;
+    }
+    
+    return dictionary;
+}
 
 + (NSMutableArray *)reverseNSMutableArray:(NSMutableArray *)array {
     if ([array count] <= 1)
