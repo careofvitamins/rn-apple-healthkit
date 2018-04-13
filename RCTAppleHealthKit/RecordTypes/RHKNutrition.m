@@ -30,32 +30,11 @@
     NSMutableSet *quantitySamples = [[NSMutableSet alloc] init];
 
     for (NSDictionary *ingredientQuantity in quantities) {
-        NSString *type = [RCTAppleHealthKit stringFromOptions:ingredientQuantity key:@"type" withDefault:nil];
-        double quantity = [RCTAppleHealthKit doubleFromOptions:ingredientQuantity key:@"quantity" withDefault:(double)0];
-        NSString *unitString = [RCTAppleHealthKit stringFromOptions:ingredientQuantity key:@"unit" withDefault:nil];
-        
-        if (type == nil || unitString == nil || quantity == 0) {
-            continue;
-        }
-        
-        HKQuantityTypeIdentifier typeIdentifier = [self getQuantityTypeIdentifier:type];
-        HKUnit *unit = [HKUnit unitFromString:unitString];
-        
-        HKQuantitySample* sample = [HKQuantitySample quantitySampleWithType:[HKQuantityType quantityTypeForIdentifier:typeIdentifier]
-                                                                   quantity:[HKQuantity quantityWithUnit:unit doubleValue:quantity]
-                                                                  startDate:recordedAt
-                                                                    endDate:recordedAt
-                                                                   metadata:metadata];
-        
+        HKQuantitySample* sample = [self buildSample:ingredientQuantity recordedAt:recordedAt metadata:metadata];
         [quantitySamples addObject:sample];
     }
 
-    // Combine nutritional data into a food correlation //
-    HKCorrelation* correlation = [HKCorrelation correlationWithType:[HKCorrelationType correlationTypeForIdentifier:HKCorrelationTypeIdentifierFood]
-                                                            startDate:recordedAt
-                                                            endDate:recordedAt
-                                                            objects:quantitySamples
-                                                            metadata:metadata];
+    HKCorrelation* correlation = [self buildCorrelation:quantitySamples recordedAt:recordedAt metadata:metadata];
 
     [self.healthStore saveObject:correlation withCompletion:^(BOOL success, NSError *error) {
         if (!success) {
@@ -87,6 +66,35 @@
         }
         callback(@[[NSNull null], @true]);
     }];
+}
+
+- (HKQuantitySample *)buildSample:(NSDictionary *)ingredientQuantity recordedAt:(NSDate *)recordedAt metadata:(NSDictionary *)metadata
+{
+    NSString *type = [RCTAppleHealthKit stringFromOptions:ingredientQuantity key:@"type" withDefault:nil];
+    double quantity = [RCTAppleHealthKit doubleFromOptions:ingredientQuantity key:@"quantity" withDefault:(double)0];
+    NSString *unitString = [RCTAppleHealthKit stringFromOptions:ingredientQuantity key:@"unit" withDefault:nil];
+    
+    if (quantity == 0) {
+        return nil;
+    }
+    
+    HKQuantityTypeIdentifier typeIdentifier = [self getQuantityTypeIdentifier:type];
+    HKUnit *unit = [HKUnit unitFromString:unitString];
+    
+    return [HKQuantitySample quantitySampleWithType:[HKQuantityType quantityTypeForIdentifier:typeIdentifier]
+                                           quantity:[HKQuantity quantityWithUnit:unit doubleValue:quantity]
+                                          startDate:recordedAt
+                                            endDate:recordedAt
+                                           metadata:metadata];
+}
+
+- (HKCorrelation *)buildCorrelation:(NSSet *)quantitySamples recordedAt:(NSDate *)recordedAt metadata:(NSDictionary *)metadata
+{
+    return [HKCorrelation correlationWithType:[HKCorrelationType correlationTypeForIdentifier:HKCorrelationTypeIdentifierFood]
+                                    startDate:recordedAt
+                                      endDate:recordedAt
+                                      objects:quantitySamples
+                                     metadata:metadata];
 }
 
 @end
