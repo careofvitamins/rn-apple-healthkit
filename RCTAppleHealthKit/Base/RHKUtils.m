@@ -306,6 +306,16 @@
     return [num boolValue];
 }
 
++ (NSArray *)arrayFromOptions:(NSDictionary *)options key:(NSString *)key withDefault:(NSArray *)defaultValue {
+    NSArray *array = [options objectForKey:key];
+    
+    if (array == nil) {
+        return array;
+    }
+    
+    return array;
+}
+
 + (NSDictionary *)dictFromOptions:(NSDictionary *)options key:(NSString *)key withDefault:(NSDictionary *)defaultValue {
     NSDictionary *dictionary = [options objectForKey:key];
     
