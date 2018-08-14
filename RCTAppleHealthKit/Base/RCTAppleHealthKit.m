@@ -198,6 +198,10 @@ RCT_EXPORT_METHOD(getInfo:(NSDictionary *)input callback:(RCTResponseSenderBlock
     [self getModuleInfo:input callback:callback];
 }
 
+RCT_EXPORT_METHOD(getMindfulMinutes:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback)
+{
+    [self mindfulness_getMindfulMinutes:input callback:callback];
+}
 
 RCT_EXPORT_METHOD(saveMindfulSession:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback)
 {

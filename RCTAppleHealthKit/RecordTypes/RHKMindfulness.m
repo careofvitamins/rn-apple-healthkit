@@ -11,6 +11,35 @@
 
 @implementation RCTAppleHealthKit (Mindfulness)
 
+- (void)mindfulness_getMindfulMinutes:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback
+{
+    HKCategoryType *categoryType = [HKCategoryType categoryTypeForIdentifier: HKCategoryTypeIdentifierMindfulSession];
+    NSDate *startDate = [RCTAppleHealthKit dateFromOptions:input key:@"startDate" withDefault:nil];
+    NSDate *endDate = [RCTAppleHealthKit dateFromOptions:input key:@"endDate" withDefault:[NSDate date]];
+    HKUnit *unit = [HKUnit minuteUnit];
+    
+    if(startDate == nil){
+        callback(@[RCTMakeError(@"startDate is required in options", nil, nil)]);
+        return;
+    }
+    NSPredicate * predicate = [RCTAppleHealthKit predicateForSamplesBetweenDates:startDate endDate:endDate];
+    
+    [self fetchCategorySamplesOfType:categoryType
+                                unit:unit
+                           predicate:predicate
+                           ascending:false
+                               limit:HKObjectQueryNoLimit
+                          completion:^(NSArray *results, NSError *error) {
+                              if(results){
+                                  callback(@[[NSNull null], results]);
+                                  return;
+                              } else {
+                                  NSLog(@"error getting mindfulness minutes samples: %@", error);
+                                  callback(@[RCTMakeError(@"error getting mindfulness minutes samples", nil, nil)]);
+                                  return;
+                              }
+                          }];
+}
 
 - (void)mindfulness_saveMindfulSession:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback
 {
@@ -37,6 +66,5 @@
     }];
 
 }
-
 
 @end
