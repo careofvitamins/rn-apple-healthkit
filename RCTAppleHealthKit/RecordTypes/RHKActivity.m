@@ -14,10 +14,10 @@
 
 - (void)activity_getActiveEnergyBurned:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback
 {
-    HKQuantityType *activeEnergyType = [HKQuantityType quantityTypeForIdentifier:HKQuantityTypeIdentifierActiveEnergyBurned];
+    HKQuantityType *quantityType = [HKQuantityType quantityTypeForIdentifier:HKQuantityTypeIdentifierActiveEnergyBurned];
     NSDate *startDate = [RCTAppleHealthKit dateFromOptions:input key:@"startDate" withDefault:nil];
     NSDate *endDate = [RCTAppleHealthKit dateFromOptions:input key:@"endDate" withDefault:[NSDate date]];
-    HKUnit *cal = [HKUnit kilocalorieUnit];
+    HKUnit *unit = [HKUnit kilocalorieUnit];
 
     if(startDate == nil){
         callback(@[RCTMakeError(@"startDate is required in options", nil, nil)]);
@@ -25,8 +25,8 @@
     }
     NSPredicate * predicate = [RCTAppleHealthKit predicateForSamplesBetweenDates:startDate endDate:endDate];
 
-    [self fetchQuantitySamplesOfType:activeEnergyType
-                                unit:cal
+    [self fetchQuantitySamplesOfType:quantityType
+                                unit:unit
                            predicate:predicate
                            ascending:false
                                limit:HKObjectQueryNoLimit
@@ -37,6 +37,36 @@
                               } else {
                                   NSLog(@"error getting active energy burned samples: %@", error);
                                   callback(@[RCTMakeError(@"error getting active energy burned samples", nil, nil)]);
+                                  return;
+                              }
+                          }];
+}
+
+- (void)activity_getExerciseMinutes:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback
+{
+    HKQuantityType *quantityType = [HKQuantityType quantityTypeForIdentifier:HKQuantityTypeIdentifierAppleExerciseTime];
+    NSDate *startDate = [RCTAppleHealthKit dateFromOptions:input key:@"startDate" withDefault:nil];
+    NSDate *endDate = [RCTAppleHealthKit dateFromOptions:input key:@"endDate" withDefault:[NSDate date]];
+    HKUnit *unit = [HKUnit minuteUnit];
+    
+    if(startDate == nil){
+        callback(@[RCTMakeError(@"startDate is required in options", nil, nil)]);
+        return;
+    }
+    NSPredicate * predicate = [RCTAppleHealthKit predicateForSamplesBetweenDates:startDate endDate:endDate];
+    
+    [self fetchQuantitySamplesOfType:quantityType
+                                unit:unit
+                           predicate:predicate
+                           ascending:false
+                               limit:HKObjectQueryNoLimit
+                          completion:^(NSArray *results, NSError *error) {
+                              if(results){
+                                  callback(@[[NSNull null], results]);
+                                  return;
+                              } else {
+                                  NSLog(@"error getting exercise minutes samples: %@", error);
+                                  callback(@[RCTMakeError(@"error getting exercise minutes samples", nil, nil)]);
                                   return;
                               }
                           }];
