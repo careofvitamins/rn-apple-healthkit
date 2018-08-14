@@ -15,6 +15,7 @@
 #import "RHKBodyMeasurements.h"
 #import "RHKCharacteristics.h"
 #import "RHKFitness.h"
+#import "RHKHeart.h"
 #import "RHKMindfulness.h"
 #import "RHKNutrition.h"
 #import "RHKPermissions.h"
@@ -102,6 +103,11 @@ RCT_EXPORT_METHOD(getLatestLeanBodyMass:(NSDictionary *)input callback:(RCTRespo
     [self body_getLatestLeanBodyMass:input callback:callback];
 }
 
+RCT_EXPORT_METHOD(getFlightsClimbedOnDay:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback)
+{
+    [self fitness_getFlightsClimbedOnDay:input callback:callback];
+}
+
 RCT_EXPORT_METHOD(getStepCount:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback)
 {
     [self fitness_getStepCountOnDay:input callback:callback];
@@ -127,11 +133,6 @@ RCT_EXPORT_METHOD(getDistanceCycling:(NSDictionary *)input callback:(RCTResponse
     [self fitness_getDistanceCyclingOnDay:input callback:callback];
 }
 
-RCT_EXPORT_METHOD(getFlightsClimbed:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback)
-{
-    [self fitness_getFlightsClimbedOnDay:input callback:callback];
-}
-
 RCT_EXPORT_METHOD(getQuantitySamples:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback)
 {
     [self getQuantitySamples:input callback:callback];
@@ -150,6 +151,11 @@ RCT_EXPORT_METHOD(saveWater:(NSDictionary *)input callback:(RCTResponseSenderBlo
 RCT_EXPORT_METHOD(getHeartRateSamples:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback)
 {
     [self vitals_getHeartRateSamples:input callback:callback];
+}
+
+RCT_EXPORT_METHOD(getHeartRateVariabilitySamples:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback)
+{
+    [self heart_getHeartRateVariabilitySamples:input callback:callback];
 }
 
 RCT_EXPORT_METHOD(getActiveEnergyBurned:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback)
@@ -192,11 +198,11 @@ RCT_EXPORT_METHOD(getInfo:(NSDictionary *)input callback:(RCTResponseSenderBlock
     [self getModuleInfo:input callback:callback];
 }
 
+
 RCT_EXPORT_METHOD(saveMindfulSession:(NSDictionary *)input callback:(RCTResponseSenderBlock)callback)
 {
     [self mindfulness_saveMindfulSession:input callback:callback];
 }
-
 
 - (void)isHealthKitAvailable:(RCTResponseSenderBlock)callback
 {

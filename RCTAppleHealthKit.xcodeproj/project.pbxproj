@@ -21,6 +21,7 @@
 		64C42D4A1D351A8800A0A8F7 /* RHKVitals.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C42D491D351A8800A0A8F7 /* RHKVitals.m */; };
 		64E0E73F1D37947B00EAB905 /* RHKResults.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E0E73E1D37947B00EAB905 /* RHKResults.m */; };
 		DB18C0E9207D3343003AF437 /* RHKNutrition.m in Sources */ = {isa = PBXBuildFile; fileRef = DB18C0E8207D3343003AF437 /* RHKNutrition.m */; };
+		DBE61B422113AACB008C1894 /* RHKHeart.m in Sources */ = {isa = PBXBuildFile; fileRef = DBE61B402113AACB008C1894 /* RHKHeart.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -64,6 +65,8 @@
 		64E0E73E1D37947B00EAB905 /* RHKResults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHKResults.m; sourceTree = "<group>"; };
 		DB18C0E7207D3343003AF437 /* RHKNutrition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHKNutrition.h; sourceTree = "<group>"; };
 		DB18C0E8207D3343003AF437 /* RHKNutrition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHKNutrition.m; sourceTree = "<group>"; };
+		DBE61B402113AACB008C1894 /* RHKHeart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RHKHeart.m; sourceTree = "<group>"; };
+		DBE61B412113AACB008C1894 /* RHKHeart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RHKHeart.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,8 @@
 				377D44F21D247D0A004E35CB /* RHKCharacteristics.m */,
 				3774C8D51D20C65F0000B3F3 /* RHKFitness.h */,
 				3774C8D61D20C65F0000B3F3 /* RHKFitness.m */,
+				DBE61B412113AACB008C1894 /* RHKHeart.h */,
+				DBE61B402113AACB008C1894 /* RHKHeart.m */,
 				61232F911E303758000A5026 /* RHKMindfulness.h */,
 				61232F921E303758000A5026 /* RHKMindfulness.m */,
 				DB18C0E7207D3343003AF437 /* RHKNutrition.h */,
@@ -200,6 +205,7 @@
 			files = (
 				3774C89B1D2095450000B3F3 /* RHKQueries.m in Sources */,
 				3774C8A11D20A6B90000B3F3 /* RHKUtils.m in Sources */,
+				DBE61B422113AACB008C1894 /* RHKHeart.m in Sources */,
 				37837E7D1DCFE270000201A0 /* RHKSleep.m in Sources */,
 				3774C8D41D20C6390000B3F3 /* RHKBodyMeasurements.m in Sources */,
 				61232F931E303758000A5026 /* RHKMindfulness.m in Sources */,
