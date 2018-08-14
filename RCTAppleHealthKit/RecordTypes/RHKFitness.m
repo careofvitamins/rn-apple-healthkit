@@ -27,10 +27,10 @@
     }
 
     HKQuantityType *stepCountType = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierStepCount];
-    HKUnit *stepsUnit = [HKUnit countUnit];
+    HKUnit *unit = [HKUnit countUnit];
 
     [self fetchSumOfSamplesOnDayForType:stepCountType
-                                   unit:stepsUnit
+                                   unit:unit
                                     day:date
                              completion:^(double value, NSDate *startDate, NSDate *endDate, NSError *error) {
         if (!value) {
@@ -41,6 +41,7 @@
 
          NSDictionary *response = @{
                  @"value" : @(value),
+                 @"unit"  : [unit unitString],
                  @"startDate" : [RCTAppleHealthKit buildISO8601StringFromDate:startDate],
                  @"endDate" : [RCTAppleHealthKit buildISO8601StringFromDate:endDate],
          };
@@ -156,6 +157,7 @@
 
         NSDictionary *response = @{
                 @"value" : @(distance),
+                @"unit"  : [unit unitString],
                 @"startDate" : [RCTAppleHealthKit buildISO8601StringFromDate:startDate],
                 @"endDate" : [RCTAppleHealthKit buildISO8601StringFromDate:endDate],
         };
@@ -182,6 +184,7 @@
 
         NSDictionary *response = @{
                 @"value" : @(distance),
+                @"unit"  : [unit unitString],
                 @"startDate" : [RCTAppleHealthKit buildISO8601StringFromDate:startDate],
                 @"endDate" : [RCTAppleHealthKit buildISO8601StringFromDate:endDate],
         };
@@ -207,6 +210,7 @@
 
         NSDictionary *response = @{
                 @"value" : @(count),
+                @"unit"  : [unit unitString],
                 @"startDate" : [RCTAppleHealthKit buildISO8601StringFromDate:startDate],
                 @"endDate" : [RCTAppleHealthKit buildISO8601StringFromDate:endDate],
         };
