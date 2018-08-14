@@ -16,7 +16,8 @@
 - (NSDictionary *)getIOS11PermissionsDictionary {
     if (@available(iOS 11.0, *)) {
         NSDictionary *permissions = @{
-            @"RestingHeartRate" : [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierRestingHeartRate]
+            @"HeartRateVariability" : [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierHeartRateVariabilitySDNN],
+            @"RestingHeartRate" : [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierRestingHeartRate]  
         };
         
         return permissions;
