@@ -28,6 +28,12 @@
                          ascending:(BOOL)asc
                              limit:(NSUInteger)lim
                         completion:(void (^)(NSArray *, NSError *))completion;
+- (void)fetchCategorySamplesOfType:(HKCategoryType *)categoryType
+                              unit:(HKUnit *)unit
+                         predicate:(NSPredicate *)predicate
+                         ascending:(BOOL)asc
+                             limit:(NSUInteger)lim
+                        completion:(void (^)(NSArray *, NSError *))completion;
 - (void)fetchCorrelationSamplesOfType:(HKQuantityType *)quantityType
                                  unit:(HKUnit *)unit
                             predicate:(NSPredicate *)predicate
