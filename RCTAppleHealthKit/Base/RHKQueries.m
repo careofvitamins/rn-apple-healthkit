@@ -221,6 +221,7 @@
                     NSString *endDateString = [RCTAppleHealthKit buildISO8601StringFromDate:sample.endDate];
 
                     NSDictionary *elem = @{
+                            @"id" : sample.UUID,
                             @"value" : @(value),
                             @"unit" : [unit unitString],
                             @"startDate" : startDateString,
@@ -278,6 +279,7 @@
                     NSTimeInterval timeInterval = [dateInterval duration];
                     
                     NSDictionary *elem = @{
+                                           @"id" : sample.UUID,
                                            @"value" : @(ceil(timeInterval / 60)),
                                            @"startDate" : startDateString,
                                            @"endDate" : endDateString,
@@ -352,6 +354,7 @@
                   }
 
                     NSDictionary *elem = @{
+                            @"id" : sample.UUID,
                             @"value" : valueString,
                             @"startDate" : startDateString,
                             @"endDate" : endDateString,
