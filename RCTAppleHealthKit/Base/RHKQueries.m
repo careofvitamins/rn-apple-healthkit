@@ -222,6 +222,7 @@
 
                     NSDictionary *elem = @{
                             @"id" : sample.UUID.UUIDString,
+                            @"quantityType": quantityType.identifier,
                             @"value" : @(value),
                             @"unit" : [unit unitString],
                             @"startDate" : startDateString,
@@ -282,6 +283,7 @@
                     
                     NSDictionary *elem = @{
                                            @"id" : sample.UUID.UUIDString,
+                                           @"categoryType": categoryType.identifier,
                                            @"value" : @(ceil(timeInterval / 60)),
                                            @"startDate" : startDateString,
                                            @"endDate" : endDateString,
