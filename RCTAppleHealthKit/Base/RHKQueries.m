@@ -221,11 +221,14 @@
                     NSString *endDateString = [RCTAppleHealthKit buildISO8601StringFromDate:sample.endDate];
 
                     NSDictionary *elem = @{
-                            @"id" : sample.UUID,
+                            @"id" : sample.UUID.UUIDString,
+                            @"quantityType": quantityType.identifier,
                             @"value" : @(value),
                             @"unit" : [unit unitString],
                             @"startDate" : startDateString,
                             @"endDate" : endDateString,
+                            @"sourceBundleIdentifier": sample.sourceRevision.source.bundleIdentifier,
+                            @"sourceName": sample.sourceRevision.source.name
                     };
 
                     [data addObject:elem];
@@ -279,10 +282,13 @@
                     NSTimeInterval timeInterval = [dateInterval duration];
                     
                     NSDictionary *elem = @{
-                                           @"id" : sample.UUID,
+                                           @"id" : sample.UUID.UUIDString,
+                                           @"categoryType": categoryType.identifier,
                                            @"value" : @(ceil(timeInterval / 60)),
                                            @"startDate" : startDateString,
                                            @"endDate" : endDateString,
+                                           @"sourceBundleIdentifier": sample.sourceRevision.source.bundleIdentifier,
+                                           @"sourceName": sample.sourceRevision.source.name
                                            };
                     
                     [data addObject:elem];
@@ -354,10 +360,12 @@
                   }
 
                     NSDictionary *elem = @{
-                            @"id" : sample.UUID,
+                            @"id" : sample.UUID.UUIDString,
                             @"value" : valueString,
                             @"startDate" : startDateString,
                             @"endDate" : endDateString,
+                            @"sourceBundleIdentifier": sample.sourceRevision.source.bundleIdentifier,
+                            @"sourceName": sample.sourceRevision.source.name
                     };
 
                     [data addObject:elem];
