@@ -226,6 +226,8 @@
                             @"unit" : [unit unitString],
                             @"startDate" : startDateString,
                             @"endDate" : endDateString,
+                            @"sourceBundleIdentifier": sample.sourceRevision.source.bundleIdentifier,
+                            @"sourceName": sample.sourceRevision.source.name
                     };
 
                     [data addObject:elem];
@@ -283,6 +285,8 @@
                                            @"value" : @(ceil(timeInterval / 60)),
                                            @"startDate" : startDateString,
                                            @"endDate" : endDateString,
+                                           @"sourceBundleIdentifier": sample.sourceRevision.source.bundleIdentifier,
+                                           @"sourceName": sample.sourceRevision.source.name
                                            };
                     
                     [data addObject:elem];
@@ -358,6 +362,8 @@
                             @"value" : valueString,
                             @"startDate" : startDateString,
                             @"endDate" : endDateString,
+                            @"sourceBundleIdentifier": sample.sourceRevision.source.bundleIdentifier,
+                            @"sourceName": sample.sourceRevision.source.name
                     };
 
                     [data addObject:elem];
